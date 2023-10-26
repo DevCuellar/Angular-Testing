@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12">
+    <button *ngIf="hasPreviousRoute()" class="btn btn-secondary mb-3" (click)="goBack()">Volver</button>
+  </div>
+</div>
+<div class="container my-4 character-ficha">
+    <div class="row">
+      <div class="col-md-4">
+        <img
+          [src]="character.image"
+          alt="{{ character.name }}"
+          class="img-fluid rounded character-image"
+        />
+      </div>
+      <div class="col-md-8">
+        <h2 class="mt-2 character-name">{{ character.name }}</h2>
+        <div class="mb-2 character-info">
+          <strong>Status:</strong>
+          <span
+            [ngClass]="{
+              'chip': true,
+              'chip-green': character.status === 'Alive',
+              'chip-red': character.status === 'Dead',
+              'chip-gray': character.status !== 'Alive' && character.status !== 'Dead'
+            }"
+          >
+            {{ character.status }}
+          </span>
+        </div>
+        <p class="mb-2 character-info"><strong>Species:</strong> {{ character.species }}</p>
+        <p class="mb-2 character-info" *ngIf="character.type"><strong>Type:</strong> {{ character.type }}</p>
+        <p class="mb-2 character-info"><strong>Gender:</strong> {{ character.gender }}</p>
+        <p class="mb-2 character-info"><strong>Origin:</strong> {{ character.origin.name }}</p>
+        <p class="mb-2 character-info"><strong>Location:</strong> {{ character.location.name }}</p>
+      </div>
+    </div>
+  </div>
+  

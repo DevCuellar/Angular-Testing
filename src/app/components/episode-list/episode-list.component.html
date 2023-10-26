@@ -1,0 +1,24 @@
+<app-pagination
+  [totalPages]="totalPages"
+  [selectedPage]="selectedPage"
+  (pageSelected)="loadEpisodes($event)"
+></app-pagination>
+
+<div class="row">
+  <div class="col-md-4" *ngFor="let episode of episodes">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">{{ episode.name }}</h5>
+        <p class="card-text">
+          <strong>Air Date:</strong> {{ episode.air_date }}
+        </p>
+        <p class="card-text">
+          <strong>Season:</strong> {{ episode.episode | season }}
+        </p>
+        <p class="card-text">
+          <strong>Episode:</strong> {{ episode.episode | episode }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<ul class="pagination">
+  <li class="page-item">
+    <button
+      class="page-link"
+      (click)="selectPage(1)"
+      [disabled]="selectedPage === 1"
+      [ngClass]="{ 'disabled-button': selectedPage === 1 }"
+    >
+      Primero
+    </button>
+  </li>
+  <li class="page-item">
+    <button
+      class="page-link"
+      (click)="selectPage(selectedPage - 1)"
+      [disabled]="selectedPage === 1"
+      [ngClass]="{ 'disabled-button': selectedPage === 1 }"
+    >
+      Anterior
+    </button>
+  </li>
+  <li
+    class="page-item"
+    *ngFor="let page of visiblePages"
+    [ngClass]="{ active: page === selectedPage }"
+  >
+    <a class="page-link" (click)="selectPage(page)">{{ page }}</a>
+  </li>
+  <li class="page-item">
+    <button
+      class="page-link"
+      (click)="selectPage(selectedPage + 1)"
+      [disabled]="selectedPage === totalPages"
+      [ngClass]="{ 'disabled-button': selectedPage === totalPages }"
+    >
+      Siguiente
+    </button>
+  </li>
+  <li class="page-item">
+    <button
+      class="page-link"
+      (click)="selectPage(totalPages)"
+      [disabled]="selectedPage === totalPages"
+      [ngClass]="{ 'disabled-button': selectedPage === totalPages }"
+    >
+      Último
+    </button>
+  </li>
+</ul>

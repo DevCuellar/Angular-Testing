@@ -1,0 +1,9 @@
+.pagination .page-link:hover {
+  cursor: pointer;
+}
+
+.disabled-button {
+  cursor: not-allowed;
+  background-color: #e0e0e0;
+  color: #777;
+}

@@ -1,0 +1,44 @@
+.character-ficha {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.character-image {
+  border: 2px solid #000;
+}
+
+.character-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.character-info {
+  margin-bottom: 10px;
+}
+
+.chip {
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.chip-green {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.chip-red {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.chip-gray {
+  background-color: #ccc;
+  color: #000;
+}
